@@ -1,0 +1,40 @@
+@import "@fontsource-variable/space-grotesk/index.css";
+@import "@fontsource-variable/inter/index.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  html,
+  body {
+    background-color: theme("colors.bg");
+    color: theme("colors.text");
+  }
+  body {
+    min-height: 100dvh;
+    background-image: theme("backgroundImage.mesh");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: theme("fontFamily.sans");
+}
+.h-heading {
+  font-family: theme("fontFamily.heading");
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #64ffda; /* accent */
+  outline-offset: 2px;
+  border-radius: 8px;
+}

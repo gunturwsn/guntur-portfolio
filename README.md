@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Guntur Wicaksono — Portfolio
 
-## Getting Started
+A small, fast portfolio built with Next.js 16 and Tailwind CSS. It focuses on the essentials: who I am, what I’ve built, and how to get in touch.
 
-First, run the development server:
+### What’s inside
+
+- Sticky sidebar with quick social links on large screens.
+- Clean sections for About, Experience, Projects, and Contact.
+- Responsive layout that moves naturally from desktop to mobile.
+- Typed data sources for experience and projects.
+
+### Tech stack
+
+- Framework: Next.js (App Router, TypeScript)
+- Styling: Tailwind CSS, CSS variables, Space Grotesk & Inter
+- Tooling: pnpm, ESLint, TypeScript
+
+### Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. Edits in `src/app/page.tsx`, `src/data/experience.ts`, and `src/data/projects.ts` hot‑reload instantly.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Update content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Hero text and social links: `src/app/page.tsx`
+- Experience: `src/data/experience.ts`
+- Projects: `src/data/projects.ts`
 
-## Learn More
+### Environment (optional)
 
-To learn more about Next.js, take a look at the following resources:
+You don’t need env vars to run this site. If you want canonical URLs to match each environment (dev, preview, production), set one of these:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `SITE_URL` (server-only) — canonical origin
+- `NEXT_PUBLIC_SITE_URL` (client-visible) — used as a fallback
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The app also auto-detects `VERCEL_URL` on Vercel previews. See `src/lib/site-url.ts`.
 
-## Deploy on Vercel
+### Production build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+pnpm build
+pnpm start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Deployment (Vercel)
+
+The project is optimized for Vercel.
+
+1. Push this repository to GitHub/GitLab/Bitbucket.
+2. In Vercel, “Import Project” → select the repo.
+3. Framework preset: Next.js. No extra config is required.
+4. (Optional) Add `SITE_URL` in Project Settings → Environment Variables.
+
+Vercel will build and deploy preview URLs on each PR and a production URL on the main branch.
+
+—
+
+Thanks for taking a look. If you spot something off or have ideas to improve the site, feel free to open an issue or reach out.
