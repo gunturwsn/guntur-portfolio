@@ -8,27 +8,27 @@ export type Project = {
     result?: string; // opsional
   };
   stack: string[];
-  links?: { demo?: string; repo?: string };
+  links?: { demo?: string; repo?: string; backend?: string; frontend?: string };
   // opsional nanti: cover?: string
 };
 
 export const projects: Project[] = [
-  {
-    slug: "personal-finance-tracker",
-    title: "Personal Finance Tracker",
-    summary: {
-      problem:
-        "Needed a reliable transaction ledger and lightweight analytics without vendor lock-in.",
-      solution:
-        "Go Fiber backend on PostgreSQL with server-side Excel exports generated directly from SQL queries.",
-      architecture:
-        "Modular Clean Architecture with GORM, JWT authentication, Docker Compose orchestration, ready for VPS deployment.",
-      result:
-        "Achieved p99 API latency under 120 ms and sub-2-second reporting exports for 50k transaction sets.",
-    },
-    stack: ["Go", "Fiber", "PostgreSQL", "GORM", "JWT", "Docker"],
-    links: { demo: "#", repo: "#" },
-  },
+  // {
+  //   slug: "personal-finance-tracker",
+  //   title: "Personal Finance Tracker",
+  //   summary: {
+  //     problem:
+  //       "Needed a reliable transaction ledger and lightweight analytics without vendor lock-in.",
+  //     solution:
+  //       "Go Fiber backend on PostgreSQL with server-side Excel exports generated directly from SQL queries.",
+  //     architecture:
+  //       "Modular Clean Architecture with GORM, JWT authentication, Docker Compose orchestration, ready for VPS deployment.",
+  //     result:
+  //       "Achieved p99 API latency under 120 ms and sub-2-second reporting exports for 50k transaction sets.",
+  //   },
+  //   stack: ["Go", "Fiber", "PostgreSQL", "GORM", "JWT", "Docker"],
+  //   links: { demo: "#", repo: "#" },
+  // },
   {
     slug: "qrmenu",
     title: "QRMenu (Multi-tenant)",
@@ -43,22 +43,22 @@ export const projects: Project[] = [
         "Delivered sub-200 ms TTFB with an ~80% cache hit rate across high-traffic menu listings.",
     },
     stack: ["Go", "Fiber", "Redis", "Next.js", "Tailwind", "Docker"],
-    links: { demo: "#", repo: "#" },
+    links: { backend: "https://github.com/gunturwsn/qrmenu-backend" },
   },
   {
-    slug: "hera-hris",
-    title: "HERA HRIS",
+    slug: "parking-pos",
+    title: "PARKING POS",
     summary: {
       problem:
-        "Enterprise HR teams needed a stable HRIS platform with granular access controls.",
+        "An application is needed to record motor vehicles in real time and also check the number of motor vehicles still in the parking lot.",
       solution:
-        "Spring Boot service secured with JWT, implementing RBAC with per-user overrides and Flyway-managed migrations.",
+        "Java Spring boot and React.js with TDD concept.",
       architecture:
-        "Hexagonal layered design on PostgreSQL with Actuator-driven observability and Dockerized dev/prod parity.",
+        "Architectured with clean architecture and dockerized for dev/prod parity.",
       result:
-        "Cut leave-approval turnaround by 35% while keeping UAT error rates below 0.2%.",
+        "Delivered with real-time vehicle tracking and reporting.",
     },
-    stack: ["Java", "Spring Boot", "PostgreSQL", "Flyway", "JWT", "Docker"],
+    stack: ["Java", "Spring Boot", "React.js", "Tailwind", "PostgreSQL", "Docker"],
     links: { demo: "#", repo: "#" },
   },
 ];
