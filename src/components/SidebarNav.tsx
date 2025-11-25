@@ -56,7 +56,7 @@ export default function SidebarNav() {
         if (bestId) setActiveId(bestId);
       },
       {
-        rootMargin: "-35% 0px -55% 0px",
+        rootMargin: "-20% 0px -50% 0px",
         threshold: [0, 0.25, 0.5, 0.75, 1],
       }
     );
@@ -105,16 +105,17 @@ export default function SidebarNav() {
           <a
             key={href}
             href={href}
+            onClick={() => setActiveId(id)}
             className={`group flex items-center gap-3 transition ${
               isActive ? "text-text" : "hover:text-text"
             }`}
           >
             <span
               aria-hidden="true"
-              className={`h-0.5 w-6 transition lg:h-px lg:w-12 ${
+              className={`h-0.5 transition-all duration-300 lg:h-px ${
                 isActive
-                  ? "bg-accent"
-                  : "bg-muted/40 group-hover:bg-muted/60"
+                  ? "w-12 bg-accent lg:w-24"
+                  : "w-6 bg-muted/40 group-hover:w-10 group-hover:bg-muted/60 lg:w-12 lg:group-hover:w-16"
               }`}
             />
             <span className="font-medium">{label}</span>
