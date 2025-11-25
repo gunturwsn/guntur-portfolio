@@ -3,7 +3,9 @@ import type { Project } from "@/data/projects";
 type Props = Project;
 
 export default function ProjectCard({ title, summary, stack, links }: Props) {
-  const hasLinks = Boolean(links?.demo || links?.repo);
+  const hasLinks = Boolean(
+    links?.demo || links?.repo || links?.backend || links?.frontend
+  );
 
   return (
     <article className="group relative grid gap-5 px-6 py-8 transition duration-300 hover:bg-white/5 md:px-10">
@@ -31,6 +33,26 @@ export default function ProjectCard({ title, summary, stack, links }: Props) {
                 className="transition hover:text-accent"
               >
                 Repo
+              </a>
+            ) : null}
+            {links?.backend ? (
+              <a
+                href={links.backend}
+                target="_blank"
+                rel="noreferrer"
+                className="transition hover:text-accent"
+              >
+                Repo Backend
+              </a>
+            ) : null}
+            {links?.frontend ? (
+              <a
+                href={links.frontend}
+                target="_blank"
+                rel="noreferrer"
+                className="transition hover:text-accent"
+              >
+                Repo Frontend
               </a>
             ) : null}
           </div>
