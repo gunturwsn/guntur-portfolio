@@ -81,7 +81,7 @@ export default function HomePage() {
       <div className="pointer-events-none absolute left-1/2 top-[-10rem] -z-10 h-[34rem] w-[36rem] -translate-x-1/2 rounded-full bg-accent/20 blur-3xl md:w-[44rem]" />
       <div className="relative mx-auto flex w-full max-w-6xl flex-col px-6 pb-10 pt-8 sm:pt-10 md:px-10 lg:flex-row lg:gap-20">
         <div className="w-full lg:w-[320px] lg:flex-none">
-          <aside className="sticky top-12 hidden lg:flex lg:h-[calc(100vh-6rem)] lg:flex-col lg:justify-between lg:py-8">
+          <aside className="fixed top-0 hidden lg:flex lg:h-screen lg:w-[320px] lg:flex-col lg:justify-center lg:py-8">
             <div className="space-y-6">
               <p className="text-xs font-semibold uppercase tracking-[0.4em] text-accent">
                 Software Engineer
@@ -90,10 +90,10 @@ export default function HomePage() {
                 Guntur Wicaksono
               </h1>
               <p className="max-w-lg text-base leading-relaxed text-muted sm:text-lg">
-                Backend-first engineer focused on reliable systems and
-                thoughtful product experiences. I currently lead the platform at{" "}
-                <span className="text-text">QrMenu</span>, keeping payments and
-                kitchen ops fast for restaurants across Indonesia.
+                Software Engineer with 5 years of experience. Focused on
+                delivering maintainable and high-quality solutions through
+                clean architecture principles, code excellence, and effective
+                team collaboration.
               </p>
             </div>
 
@@ -128,10 +128,10 @@ export default function HomePage() {
               Guntur Wicaksono
             </h1>
             <p className="max-w-xl text-base leading-relaxed text-muted">
-              Backend-first engineer focused on reliable systems and thoughtful
-              product experiences. I currently lead the platform at{" "}
-              <span className="text-text">QrMenu</span>, keeping payments and
-              kitchen ops fast for restaurants across Indonesia.
+              Software Engineer with 5 years of experience. Focused on
+              delivering maintainable and high-quality solutions through
+              clean architecture principles, code excellence, and effective
+              team collaboration.
             </p>
             <SidebarNav />
             <div className="flex flex-wrap gap-4 text-muted">
@@ -165,12 +165,7 @@ export default function HomePage() {
             </header>
             <div className="mt-6 space-y-5 text-base leading-relaxed text-muted sm:text-lg">
               <p>
-                Software Engineer with 5 years of experience building scalable
-                backend and full-stack applications using Java (Spring MVC), Go,
-                Python (Django), and JavaScript/TypeScript (Node.js, NestJS,
-                Vue, React). Focused on delivering maintainable and high-quality
-                solutions through clean architecture principles, code
-                excellence, and effective team collaboration.
+                Software Engineer with 5 years of experience building scalable backend and full-stack applications using Java (Spring MVC), Go, Python (Django), and JavaScript/TypeScript (Node.js, NestJS, Vue, React). Focused on delivering maintainable and high-quality solutions through clean architecture principles, code excellence, and effective team collaboration.
               </p>
             </div>
           </section>
@@ -274,9 +269,8 @@ export default function HomePage() {
             </header>
             <div className="mt-6 space-y-4">
               <p className="max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-                Want to collaborate or need help getting your platform in shape?
-                I&apos;m always open to new challenges, consulting, and pairing
-                sessions with teams who care about shipping quality software.
+                Let&apos;s connect and explore how we can work together to build
+                something amazing.
               </p>
               <a
                 href="mailto:gunturw79@gmail.com"
